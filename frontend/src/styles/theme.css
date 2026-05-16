@@ -1,0 +1,478 @@
+/*  src/styles/theme.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 174 62% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 174 40% 94%;
+    --accent-foreground: 174 62% 28%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 174 62% 38%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 210 20% 80%;
+    --sidebar-primary: 174 62% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 174 62% 48%;
+
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 210 80% 52%;
+    --info-foreground: 0 0% 100%;
+
+    /* RGB tokens for layout + dashboard pages */
+    --white: 255 255 255;
+    --black: 15 23 42;
+
+    --gray-soft: 243 244 246;
+    --gray-light: 148 163 184;
+    --gray-base: 148 163 184;
+    --gray-dark: 51 65 85;
+
+    --zinc-soft: 248 250 252;
+    --zinc-light: 241 245 249;
+    --zinc-base: 100 116 139;
+    --zinc-dark: 30 41 59;
+
+    --border-default: 226 232 240;
+    --text-list: 51 65 85;
+    --font-base: "Inter", sans-serif;
+
+    --blue-soft: 219 234 254;
+    --blue-light: 191 219 254;
+    --blue-base: 37 99 235;
+    --blue-dark: 29 78 216;
+
+    --red-soft: 254 226 226;
+    --red-light: 254 202 202;
+    --red-base: 239 68 68;
+    --red-dark: 220 38 38;
+
+    --green-soft: 220 252 231;
+    --green-light: 187 247 208;
+    --green-base: 34 197 94;
+    --green-dark: 22 163 74;
+
+    --yellow-soft: 254 249 195;
+    --yellow-light: 254 240 138;
+    --yellow-base: 245 158 11;
+    --yellow-dark: 217 119 6;
+
+    --orange-soft: 255 237 213;
+    --orange-light: 254 215 170;
+    --orange-base: 249 115 22;
+    --orange-dark: 234 88 12;
+
+    --teal-soft: 204 251 241;
+    --teal-light: 153 246 228;
+    --teal-base: 20 184 166;
+    --teal-dark: 13 148 136;
+
+    --app-sidebar-bg: 255 255 255;
+    --app-sidebar-border: 226 232 240;
+    --app-sidebar-text: 31 41 55;
+    --app-sidebar-icon: 51 65 85;
+    --app-sidebar-muted: 100 116 139;
+    --app-sidebar-dot: 148 163 184;
+    --app-sidebar-accent: 239 68 68;
+    --app-sidebar-active-bg: 254 242 242;
+    --app-sidebar-hover-bg: 248 250 252;
+    --app-sidebar-hover-text: 15 23 42;
+
+    --form-bg: 255 255 255;
+    --form-surface: 248 250 252;
+    --form-text: 15 23 42;
+    --form-label: 15 23 42;
+    --form-placeholder: 100 116 139;
+    --form-border: 203 213 225;
+    --form-border-muted: 226 232 240;
+    --form-border-focus: 20 184 166;
+    --form-error: 239 68 68;
+    --form-error-soft: 254 226 226;
+    --overlay-backdrop: 15 23 42;
+    --surface-elevated: 255 255 255;
+    --danger-action: 239 68 68;
+    --danger-action-foreground: 255 255 255;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 210 20% 95%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 174 62% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 174 30% 18%;
+    --accent-foreground: 174 62% 58%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 174 62% 48%;
+    --sidebar-background: 220 30% 6%;
+    --sidebar-foreground: 210 20% 80%;
+    --sidebar-primary: 174 62% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 25% 12%;
+    --sidebar-ring: 174 62% 48%;
+
+    --white: 15 23 42;
+    --black: 241 245 249;
+
+    --gray-soft: 30 41 59;
+    --gray-light: 100 116 139;
+    --gray-dark: 203 213 225;
+
+    --zinc-soft: 30 41 59;
+    --zinc-light: 51 65 85;
+    --zinc-base: 148 163 184;
+    --zinc-dark: 226 232 240;
+
+    --border-default: 51 65 85;
+    --text-list: 203 213 225;
+    --font-base: "Inter", sans-serif;
+
+    --blue-soft: 30 58 138;
+    --blue-light: 37 99 235;
+    --blue-base: 96 165 250;
+    --blue-dark: 147 197 253;
+
+    --red-soft: 127 29 29;
+    --red-light: 153 27 27;
+    --red-base: 248 113 113;
+    --red-dark: 252 165 165;
+
+    --green-soft: 20 83 45;
+    --green-light: 22 101 52;
+    --green-base: 74 222 128;
+    --green-dark: 134 239 172;
+
+    --yellow-soft: 113 63 18;
+    --yellow-light: 146 64 14;
+    --yellow-base: 251 191 36;
+    --yellow-dark: 252 211 77;
+
+    --orange-soft: 124 45 18;
+    --orange-light: 154 52 18;
+    --orange-base: 251 146 60;
+    --orange-dark: 253 186 116;
+
+    --teal-soft: 19 78 74;
+    --teal-light: 17 94 89;
+    --teal-base: 45 212 191;
+    --teal-dark: 94 234 212;
+
+    --app-sidebar-bg: 15 23 42;
+    --app-sidebar-border: 30 41 59;
+    --app-sidebar-text: 203 213 225;
+    --app-sidebar-icon: 148 163 184;
+    --app-sidebar-muted: 100 116 139;
+    --app-sidebar-dot: 100 116 139;
+    --app-sidebar-accent: 248 113 113;
+    --app-sidebar-active-bg: 69 10 10;
+    --app-sidebar-hover-bg: 30 41 59;
+    --app-sidebar-hover-text: 241 245 249;
+
+    --form-bg: 15 23 42;
+    --form-surface: 30 41 59;
+    --form-text: 241 245 249;
+    --form-label: 241 245 249;
+    --form-placeholder: 148 163 184;
+    --form-border: 71 85 105;
+    --form-border-muted: 51 65 85;
+    --form-border-focus: 45 212 191;
+    --form-error: 248 113 113;
+    --form-error-soft: 127 29 29;
+    --overlay-backdrop: 2 6 23;
+    --surface-elevated: 15 23 42;
+    --danger-action: 248 113 113;
+    --danger-action-foreground: 15 23 42;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .form-container {
+    @apply flex w-full flex-col gap-1.5;
+  }
+
+  .form-label {
+    color: rgb(var(--form-label));
+    @apply mb-1 block text-[15px] font-semibold leading-normal;
+  }
+
+  .form-label-inline {
+    color: rgb(var(--form-label));
+    @apply font-medium leading-normal;
+  }
+
+  .form-required {
+    color: rgb(var(--form-error));
+    @apply ml-1;
+  }
+
+  .form-input {
+    background-color: rgb(var(--form-bg));
+    color: rgb(var(--form-text));
+    border-color: rgb(var(--form-border));
+    @apply h-12 w-full rounded-xl border px-4 text-sm outline-none transition;
+  }
+
+  .form-textarea {
+    background-color: rgb(var(--form-bg));
+    color: rgb(var(--form-text));
+    border-color: rgb(var(--form-border));
+    @apply min-h-[110px] w-full rounded-xl border px-4 py-3 text-sm outline-none transition resize-none;
+  }
+
+  .form-placeholder::placeholder {
+    color: rgb(var(--form-placeholder));
+  }
+
+  .form-error {
+    color: rgb(var(--form-error));
+    @apply mt-1 text-xs;
+  }
+
+  .form-border-default {
+    border-color: rgb(var(--form-border));
+  }
+
+  .form-border-error {
+    border-color: rgb(var(--form-error));
+  }
+
+  .form-border-focus {
+    @apply focus:ring-2;
+    --tw-ring-color: rgb(var(--teal-soft));
+  }
+
+  .form-border-focus:focus,
+  .form-border-focus:focus-within {
+    border-color: rgb(var(--form-border-focus));
+  }
+
+  .form-tooltip-icon {
+    color: rgb(var(--form-placeholder));
+    @apply h-4 w-4 cursor-help;
+  }
+
+  .form-tooltip {
+    background-color: rgb(var(--zinc-dark));
+    color: rgb(var(--white));
+    @apply absolute left-0 top-[calc(100%+0.5rem)] z-20 w-56 rounded-lg px-3 py-2 text-xs leading-relaxed shadow-lg;
+  }
+
+  .text-form-label {
+    color: rgb(var(--form-label));
+  }
+
+  .text-form-text {
+    color: rgb(var(--form-text));
+  }
+
+  .text-text-base {
+    color: rgb(var(--black));
+  }
+
+  .text-text-error {
+    color: rgb(var(--form-error));
+  }
+
+  .bg-background {
+    background-color: rgb(var(--background));
+  }
+
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
+
+  .bg-card {
+    background-color: rgb(var(--card));
+  }
+
+  .text-card-foreground {
+    color: rgb(var(--card-foreground));
+  }
+
+  .bg-popover {
+    background-color: rgb(var(--popover));
+  }
+
+  .text-popover-foreground {
+    color: rgb(var(--popover-foreground));
+  }
+
+  .bg-primary {
+    background-color: rgb(var(--primary));
+  }
+
+  .text-primary-foreground {
+    color: rgb(var(--primary-foreground));
+  }
+
+  .bg-secondary {
+    background-color: rgb(var(--secondary));
+  }
+
+  .text-secondary-foreground {
+    color: rgb(var(--secondary-foreground));
+  }
+
+  .bg-muted {
+    background-color: rgb(var(--muted));
+  }
+
+  .text-muted-foreground {
+    color: rgb(var(--muted-foreground));
+  }
+
+  .bg-accent {
+    background-color: rgb(var(--accent));
+  }
+
+  .text-accent-foreground {
+    color: rgb(var(--accent-foreground));
+  }
+
+  .bg-destructive {
+    background-color: rgb(var(--destructive));
+  }
+
+  .text-destructive-foreground {
+    color: rgb(var(--destructive-foreground));
+  }
+
+  .border-border {
+    border-color: rgb(var(--border));
+  }
+
+  .border-border-default {
+    border-color: rgb(var(--border-default));
+  }
+
+  .border-border-muted {
+    border-color: rgb(var(--form-border-muted));
+  }
+
+  .border-gray-base {
+    border-color: rgb(var(--gray-base));
+  }
+
+  .bg-gray-base {
+    background-color: rgb(var(--gray-base));
+  }
+
+  .bg-form-bg {
+    background-color: rgb(var(--form-bg));
+  }
+
+  .bg-bg-surface {
+    background-color: rgb(var(--form-surface));
+  }
+
+  .bg-gray-light {
+    background-color: rgb(var(--zinc-light));
+  }
+
+  .border-form-border {
+    border-color: rgb(var(--form-border));
+  }
+
+  .border-form-border-focus {
+    border-color: rgb(var(--form-border-focus));
+  }
+
+  .border-form-default {
+    border-color: rgb(var(--form-border));
+  }
+
+  .border-border-default {
+    border-color: rgb(var(--border-default));
+  }
+
+  .border-border-muted {
+    border-color: rgb(var(--form-border-muted));
+  }
+
+  .border-error {
+    border-color: rgb(var(--form-error));
+  }
+
+  .outline-border-muted {
+    outline-color: rgb(var(--form-border-muted));
+  }
+
+  .hover\:bg-gray-base:hover {
+    background-color: rgb(var(--gray-soft));
+  }
+
+  .stat-card {
+    @apply bg-card rounded-xl border p-6 shadow-sm transition-all duration-200 hover:shadow-md;
+  }
+
+  .page-header {
+    @apply mb-8;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold tracking-tight text-foreground;
+  }
+
+  .page-description {
+    @apply text-sm text-muted-foreground mt-1;
+  }
+
+  .form-footer {
+    background-color: rgb(var(--white));
+    border-color: rgb(var(--border-default));
+    @apply flex items-center justify-end gap-4 border-t px-6 py-4 rounded-b-lg;
+  }
+}

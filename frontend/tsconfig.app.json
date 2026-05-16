@@ -5,7 +5,7 @@
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "types": ["vite/client"],
+    "types": ["vite/client", "node"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -15,6 +15,24 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": ["src/api-services/*"],
+      "@services/*": ["src/services/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@scss/*": ["src/assets/scss/*"],
+      "@components/*": ["src/components/*"],
+      "@context/*": ["src/context/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@pages/*": ["src/pages/*"],
+      "@routes/*": ["src/routes/*"],
+      "@store/*": ["src/store/*"],
+      "@tests/*": ["src/tests/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@validations/*": ["src/validations/*"],
+      "@translations/*": ["translations/*"]
+    },
 
     /* Linting */
     "strict": true,
