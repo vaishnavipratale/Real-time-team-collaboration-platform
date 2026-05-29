@@ -1,5 +1,4 @@
 // @components/icons.ts
-import type { LucideIcon } from "lucide-react";
 import { createElement, type SVGProps } from "react";
 import {
   Info,
@@ -23,7 +22,6 @@ import {
   ChevronUp,
   Search,
   Edit,
-  Trash,
   RotateCw,
   Eye,
   Download,

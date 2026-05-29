@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, type ErrorInfo, type ReactNode } from "react";
 import { Link } from 'react-router-dom';
 
 interface Props {
@@ -44,15 +44,6 @@ class ErrorBoundary extends Component<Props, State> {
       });
     }
   }
-
-  private handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-    });
-    window.location.href = '/';
-  };
 
   public render() {
     if (this.state.hasError) {

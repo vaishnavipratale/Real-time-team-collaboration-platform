@@ -10,7 +10,7 @@ import {
   Dropdown,
   DirectionAwareTable,
 } from "@components/component";
-import { JSX } from "react";
+import type { JSX } from "react";
 import { Icons } from "@components/icons";
 import { capitalizeFirstLetter } from "@utils/capitalizeUtil";
 

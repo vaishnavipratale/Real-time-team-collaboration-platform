@@ -1,4 +1,4 @@
-// tailwind.config.js
+﻿// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -104,3 +104,5 @@ export default {
   },
   plugins: [],
 };
+
+

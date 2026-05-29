@@ -1,8 +1,8 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
 import { useSession } from "@context/sessionContext";
+import type { ReactNode } from "react";
 
-const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const ProtectedRoute = ({ children }: { children: ReactNode }) => {
   const { isAuthenticated, loading } = useSession();
 
   if (loading) {

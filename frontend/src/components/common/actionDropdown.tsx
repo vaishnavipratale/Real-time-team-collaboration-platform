@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useState, useRef } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { Icons } from "@components/icons";
 

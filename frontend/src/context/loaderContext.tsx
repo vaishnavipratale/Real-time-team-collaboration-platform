@@ -1,10 +1,10 @@
-import React, {
+import {
   createContext,
   useContext,
   useState,
   useCallback,
   useRef,
-  ReactNode,
+  type ReactNode,
 } from "react";
 import Loader from "@components/common/loader";
  
@@ -19,7 +19,7 @@ interface LoaderProviderProps {
   children: ReactNode;
 }
  
-export const LoaderProvider: React.FC<LoaderProviderProps> = ({ children }) => {
+export const LoaderProvider = ({ children }: LoaderProviderProps) => {
   const [loadingCount, setLoadingCount] = useState(0);
   const [message, setMessage] = useState<string>("Loading...");
   const startTimeRef = useRef<number>(0);

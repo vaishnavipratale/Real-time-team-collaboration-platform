@@ -1,6 +1,6 @@
 export const handleOutsideClick = (
     modalRef: React.RefObject<HTMLElement>,
-    onClose: () => void
+    _onClose: () => void
   ): (() => void) => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;

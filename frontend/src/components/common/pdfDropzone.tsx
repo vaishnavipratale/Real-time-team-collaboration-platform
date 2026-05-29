@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  forwardRef,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { forwardRef, useImperativeHandle, useMemo, useRef, useState } from "react";
 import { Icons } from "@components/icons";
 
 export type PdfDropzoneHandle = {

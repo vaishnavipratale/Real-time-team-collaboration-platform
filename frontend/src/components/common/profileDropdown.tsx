@@ -63,15 +63,14 @@
 //   );
 // }
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Icons } from "@components/icons";
+import type { MouseEvent } from "react";
 
 export type ProfileDropdownProps = {
   name: string;
   role: string;
-  onLogout: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onLogout: (e: MouseEvent<HTMLButtonElement>) => void;
   onClose: () => void;
   onProfileClick: () => void;
 };
@@ -84,7 +83,6 @@ export default function ProfileDropdown({
   onProfileClick,
 }: ProfileDropdownProps) {
   const { t } = useTranslation();
-  const [isProfilePopupOpen, setProfilePopupOpen] = useState(false);
   return (
     <>
       <div className="absolute right-0 mt-4 w-56 bg-white rounded-b-md shadow-lg z-50 overflow-hidden border border-gray-soft border-t-0">

@@ -103,7 +103,9 @@ export function getErrorMessage(
   fallback = DEFAULT_ERROR_MESSAGE,
 ): string {
   if (error instanceof HttpError) {
-    const raw = extractMessageFromData(error.body) || cleanupMessage(error.serverMessage);
+    const httpError = error;
+    const raw =
+      extractMessageFromData(httpError.body) || cleanupMessage(httpError.serverMessage);
     if (!raw) return fallback;
 
     const parts = raw
@@ -111,7 +113,7 @@ export function getErrorMessage(
       .map((part) => cleanupMessage(part))
       .filter(Boolean);
     const firstMessage = parts[0] || "";
-    return resolveSafeHttpMessage(error, firstMessage, fallback);
+    return resolveSafeHttpMessage(httpError, firstMessage, fallback);
   }
 
   if (error instanceof NetworkError) {

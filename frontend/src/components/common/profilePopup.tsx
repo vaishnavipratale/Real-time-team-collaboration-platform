@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Icons } from "@components/icons";
 import { useSession } from "@context/sessionContext";
 import { useTranslation } from "react-i18next";
@@ -29,7 +29,7 @@ const ProfilePopup: React.FC<ProfilePopupProps> = ({ onClose }) => {
         user?.email ||
         "",
       email: user?.email,
-      phone: user?.mobile || (user as any)?.phone,
+      phone: user?.mobile || user?.phone,
       role: user?.role,
     }),
     [user]
@@ -67,7 +67,7 @@ const ProfilePopup: React.FC<ProfilePopupProps> = ({ onClose }) => {
               <p className="text-sm text-white/70 mt-0.5">
                 {profileData.role
                   ?.split("_")
-                  .map((w) => w[0].toUpperCase() + w.slice(1))
+                  .map((w: string) => w[0].toUpperCase() + w.slice(1))
                   .join(" ")}
               </p>
             </div>
